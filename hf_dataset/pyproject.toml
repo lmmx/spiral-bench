@@ -1,0 +1,20 @@
+[project]
+name = "hf-dataset"
+version = "0.1.0"
+description = "Conversation format JSONL dataset of the SpiralBench v2 results"
+readme = "README.md"
+authors = [
+    { name = "Louis Maddox", email = "louismmx@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=1.32.3",
+    "pydantic>=2.11.7",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project.scripts]
+create-hf-dataset = "hf_dataset.create_dataset:create_hf_dataset"
